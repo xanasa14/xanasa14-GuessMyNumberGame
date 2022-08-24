@@ -1,5 +1,13 @@
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
 function GameScreen(){
-    return <Text>Game Screen</Text>
-}
+    return(
+    <View>
+        <View> 
+           <Text>Opponents Guess</Text>
+        </View>
+        <View> 
+           <Text>Higher or lower?</Text>
+        </View>
+    </View>
+)}
 export default GameScreen;
