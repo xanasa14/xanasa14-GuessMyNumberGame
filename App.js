@@ -1,10 +1,15 @@
-import { StyleSheet , View} from 'react-native';
+import { StyleSheet , View, ImageBackground} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import StartGameScreen from '../GuessMyNumberGame/screens/StartGameScreen';
 export default function App() {
   return (
     <LinearGradient colors={['#4e0329', '#ddb52f']} style={styles.rootScreen}>
-      <StartGameScreen />
+    <ImageBackground 
+          source={require('./assets/background.png')}
+          resizeMode="cover"
+          style={styles.rootScreen}>
+        <StartGameScreen/>
+    </ImageBackground>
     </LinearGradient>
   );
 }
