@@ -7,7 +7,10 @@ export default function App() {
     <ImageBackground 
           source={require('./assets/background.png')}
           resizeMode="cover"
-          style={styles.rootScreen}>
+          style={styles.rootScreen}
+          imageStyle={styles.backgroundImageContainer}
+          >
+
         <StartGameScreen/>
     </ImageBackground>
     </LinearGradient>
@@ -17,5 +20,8 @@ export default function App() {
 const styles = StyleSheet.create({
   rootScreen:{
     flex:1,
+  }, 
+  backgroundImageContainer:{
+    opacity:0.25
   }
 });
