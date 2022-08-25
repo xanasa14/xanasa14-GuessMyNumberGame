@@ -1,4 +1,4 @@
-import { StyleSheet , View, ImageBackground} from 'react-native';
+import { StyleSheet , View, ImageBackground, SafeAreaView} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import StartGameScreen from '../GuessMyNumberGame/screens/StartGameScreen';
 import { useState } from 'react';
@@ -20,8 +20,9 @@ export default function App() {
           style={styles.rootScreen}
           imageStyle={styles.backgroundImageContainer}
           >
-
-        {screen}
+        <SafeAreaView style={styles.rootScreen}>
+          {screen}
+        </SafeAreaView>
     </ImageBackground>
     </LinearGradient>
   );
