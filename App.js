@@ -3,6 +3,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import StartGameScreen from '../GuessMyNumberGame/screens/StartGameScreen';
 import { useState } from 'react';
 import GameScreen from './screens/GameScreen';
+import Colors from './constants/colors';
 export default function App() {
   const [userNumber, setUserNumber] = useState();
   function pickedNumberHandler(pickedNumber){
@@ -13,7 +14,7 @@ export default function App() {
     screen = <GameScreen/>
   }
   return (
-    <LinearGradient colors={['#4e0329', '#ddb52f']} style={styles.rootScreen}>
+    <LinearGradient colors={[Colors.primary700, Colors.accent500]} style={styles.rootScreen}>
     <ImageBackground 
           source={require('./assets/background.png')}
           resizeMode="cover"
