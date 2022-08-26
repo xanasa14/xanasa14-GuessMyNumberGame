@@ -11,8 +11,9 @@ const styles = StyleSheet.create({
         padding: 40,
     },
     title:{
+        fontFamily:'open-sans-bold',
         fontSize: 24,
-        fontWeight: 'bold',
+        //fontWeight: 'bold',
         color: 'white',
         textAlign: 'center',
         borderWidth: 2,
