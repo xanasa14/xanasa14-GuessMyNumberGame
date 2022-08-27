@@ -40,7 +40,9 @@ return (
                 autoCorrect={false}
                 value={enteredNumber}
                 onChangeText={numberInputHandler}
+                
                 />
+                {console.log(enteredNumber)}
             <View style={styles.buttonsContainer}>
         
                 <View style={styles.buttonContainer}>
