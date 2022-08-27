@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     inputContainer:{
         justifyContent:'center' ,
         alignItems: 'center' ,
-        marginTop: 36,
+        marginTop: 0,
         marginHorizontal: 24,
         padding: 16,
         backgroundColor: Colors.primary800,

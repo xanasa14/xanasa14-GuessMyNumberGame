@@ -6,6 +6,7 @@ import PrimaryButton from '../components/ui/PrimaryButton';
 import Card from '../components/ui/Card';
 import InstructionText from '../components/ui/InstructionText';
 import {Ionicons} from '@expo/vector-icons';
+import GuessLogItem from '../components/game/GuessLogItem';
 
 
 
@@ -57,6 +58,8 @@ function GameScreen({userNumber, onGameOver}){
         setGuessRounds(prevGuessRounds => [newRndNumber, ...prevGuessRounds]);
         //console.log(newRndNumber)
     }
+    const guessRoundsListLength = guessRounds.length;
+
     
     return(
     <View style={styles.screen}>
@@ -76,10 +79,16 @@ function GameScreen({userNumber, onGameOver}){
         <View>
            {/*guessRounds.map(guessRound => <Text key={guessRound}>{guessRound}</Text>)*/}
            <FlatList 
-            data={guessRounds} 
-            renderItem={(itemData) => <Text>{itemData.item}</Text>} 
-            keyExtractor={(item) => item}
-           ></FlatList>
+           
+                data={guessRounds} 
+                renderItem={(itemData) => (
+                    <GuessLogItem 
+                        roundsNumber = {guessRoundsListLength - itemData.index} 
+                        guess={itemData.item} 
+                    /> 
+                )}
+                keyExtractor={(item) => item}
+            />    
             </View>
     </View>
 );}
